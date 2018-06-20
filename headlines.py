@@ -14,7 +14,7 @@ RSS_FEEDS = {'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
 def get_news():
 	query = request.args.get("publication")
 	if not query or query.lower() not in RSS_FEEDS:
-		publication = "bbc"
+		publication = "nyt"
 	else:
 		publication = query.lower()
 	feed = feedparser.parse(RSS_FEEDS[publication])
